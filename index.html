@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/bootstrap.css.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>What is your ideal dog type?</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Who will be your new best friend?</h1>
+    <h2 class="intro">To find out what type of dog breed is best for your lifestyle, please tell us a little bit about
+      yourself!</h2>
+    <form id="match">
+
+      <!--- Questions about the user -->
+
+      <div class="form-group">
+        <label for="userName">Please enter your name:</label>
+        <input id="userName" type="text">
+      </div>
+
+      <!--- User's Gender -->
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" class="form-control inputWidth">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="non-binary">non-binary</option>
+          <option value="no-identify">I prefer not to identify</option>
+        </select>
+      </div>
+
+      <!--- User's Age Range -->
+      <div class="form-group">
+        <label for="age">Select your age range:</label>
+        <select id="age" class="form-control inputWidth">
+          <option value="18-25">18-25</option>
+          <option value="26-35">26-35</option>
+          <option value="36-100">36-100</option>
+        </select>
+      </div>
+
+      <!--- User's Energy-->
+      <div class="form-group">
+        <label for="human-energy">How would you describe your energy level?:</label>
+        <select id="human-energy" class="form-control inputWidth">
+          <option value="active">I'm very active!</option>
+          <option value="sedentary">I'm moderately active, sometimes sedentary</option>
+        </select>
+      </div>
+
+      <!--- User's Living Environment -->
+      <div class="form-group">
+        <label for="location">What kind of environment do you live in?</label>
+        <select id="location" class="form-control inputWidth">
+          <option value="city">I live in the city</option>
+          <option value="rural">I live in a rural area</option>
+        </select>
+      </div>
+
+      <!--- Questions about the ideal dog -->
+
+      <!--- Do you prefer Small or Large dog? -->
+      <div class="form-group">
+        <label for="size">Do you prefer small dogs or large dogs?</label>
+        <select id="energy" class="form-control inputWidth">
+          <option value="small">I prefer small dogs!</option>
+          <option value="large">I prefer large dogs!</option>
+        </select>
+      </div>
+
+      <!--- Do you prefer an active or calm dog?-->
+      <div class="form-group">
+        <label for="dog-energy">Do you want a running buddy or a TV companion?</label>
+        <select id="energy" class="form-control inputWidth">
+          <option value="active">I want an energetic friend!</option>
+          <option value="inactive">I want a calm companion</option>
+        </select>
+      </div>
+
+      <!--- Submit Button-->
+      <button type="submit" class="btn btn-primary">Show me my new best friend!</button>
+    </form>
+  </div>
+</body>
+</html>
