@@ -5,6 +5,7 @@ function Dog(size,energy) {
   this.energy =energy;
 }
 
+
 function User(name,gender,age,activity,location,sizepref,energypref) {
   this.name = name;
   this.gender = gender;
@@ -36,5 +37,7 @@ $(document).ready(function() {
     var userLocation = $("input#location").val();
     var userSizePref = $("input#size").val();
     var userEnergyPref = $("input#energy")
+
+    var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
   })
 })
