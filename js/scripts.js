@@ -17,11 +17,29 @@ function User(name,gender,age,activity,location,sizepref,energypref) {
   this.age = age;
   this.activity = activity;
   this.location = location;
-  this.sizepref = sizepref;
-  this.energypref =energypref;
+  this.sizePref = sizePref;
+  this.energyPref = energyPref;
 }
 
-User.
+User.prototype.selectDog = function (){
+  if ((this.sizePref = "small") && (this.energyPref = "inactive")) {
+    return(Pug)
+  }
+  else if ((this.sizePref = "large") && (this.energyPref = "inactive")) {
+    return(berneseMountainDog)
+  }
+  else if ((this.sizePref = "small") && (this.energyPref = "active")) {
+    return(chihuahua)
+  }
+  else if ((this.sizePref = "Large") && (this.energyPref = "active")) {
+    return(goldenRetriever)
+  }
+};
+
+User.prototype.displayDog = function() {
+  $("#name").text(this.name)
+
+}
 
 
 
@@ -45,7 +63,7 @@ $(document).ready(function() {
     var userEnergyPref = $("input#energy")
 
     var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
-    newUser.selectDog();
+    newUser.selectDog() = dogSuggestion
     newUser.displayDog();
   })
 })
