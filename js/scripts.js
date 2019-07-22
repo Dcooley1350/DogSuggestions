@@ -65,6 +65,7 @@ $(document).ready(function() {
 
     var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
     newUser.selectDog() = dogSuggestion
-    newUser.displayDog(dogSuggestion);
+    newUser.suggestion = dogSuggestion;
+    newUser.displayDog();
   })
 })
