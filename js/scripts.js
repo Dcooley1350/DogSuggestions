@@ -39,7 +39,7 @@ User.prototype.selectDog = function (){
 
 User.prototype.displayDog = function() {
   $("#name").text(this.name)
-  $("#" + this.suggestion)
+  $("#" + this.suggestion).show
 }
 
 
