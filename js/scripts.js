@@ -5,6 +5,11 @@ function Dog(size,energy) {
   this.energy =energy;
 }
 
+var chihuahua = new Dog("small", "active");
+var berneseMountainDog = new Dog("Large", "inactive");
+var Pug = new Dog("small","inactive");
+var golderRetriever = new Dog("large","active");
+
 
 function User(name,gender,age,activity,location,sizepref,energypref) {
   this.name = name;
@@ -16,6 +21,7 @@ function User(name,gender,age,activity,location,sizepref,energypref) {
   this.energypref =energypref;
 }
 
+User.
 
 
 
@@ -39,5 +45,7 @@ $(document).ready(function() {
     var userEnergyPref = $("input#energy")
 
     var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
+    newUser.selectDog();
+    newUser.displayDog();
   })
 })
