@@ -11,7 +11,7 @@ var Pug = new Dog("small","inactive");
 var golderRetriever = new Dog("large","active");
 
 
-function User(name,gender,age,activity,location,sizepref,energypref) {
+function User(name,gender,age,activity,location,sizePref,energyPref, suggestion) {
   this.name = name;
   this.gender = gender;
   this.age = age;
@@ -19,6 +19,7 @@ function User(name,gender,age,activity,location,sizepref,energypref) {
   this.location = location;
   this.sizePref = sizePref;
   this.energyPref = energyPref;
+  this.suggestion = suggestion;
 }
 
 User.prototype.selectDog = function (){
@@ -38,7 +39,7 @@ User.prototype.selectDog = function (){
 
 User.prototype.displayDog = function() {
   $("#name").text(this.name)
-
+  $("#" + this.suggestion)
 }
 
 
@@ -60,10 +61,10 @@ $(document).ready(function() {
     var userEnergy = $("input#activity").val();
     var userLocation = $("input#location").val();
     var userSizePref = $("input#size").val();
-    var userEnergyPref = $("input#energy")
+    var userEnergyPref = $("input#energy").val();
 
     var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
     newUser.selectDog() = dogSuggestion
-    newUser.displayDog();
+    newUser.displayDog(dogSuggestion);
   })
 })

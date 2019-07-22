@@ -1,6 +1,6 @@
 # _Dog Suggestion Generator_
 
-#### _Order a Pizza from Hippo's Hot Pies, 7/9/2019_
+#### _Enter some information about yourself, 7/22/2019_
 #### By _**Devin Cooley** and **Elizabeth Eymann**_
 
 ## Description
