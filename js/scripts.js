@@ -1,14 +1,15 @@
 // BUSINESS LOGIC
 
-function Dog(size,energy) {
+function Dog(name, size, energy) {
+  this.name = name;
   this.size = size;
   this.energy =energy;
 }
 
-var chihuahua = new Dog("small", "active");
-var berneseMountainDog = new Dog("Large", "inactive");
-var Pug = new Dog("small","inactive");
-var golderRetriever = new Dog("large","active");
+var chihuahua = new Dog("chihuahua","small", "active");
+var berneseMountainDog = new Dog("bernese","large", "inactive");
+var pug = new Dog("pug","small","inactive");
+var goldenRetriever = new Dog("golden-retriever","large","active");
 
 
 function User(name,gender,age,activity,location,sizePref,energyPref, suggestion) {
@@ -23,23 +24,23 @@ function User(name,gender,age,activity,location,sizePref,energyPref, suggestion)
 }
 
 User.prototype.selectDog = function (){
-  if ((this.sizePref = "small") && (this.energyPref = "inactive")) {
-    return(Pug)
+  if ((this.sizePref == "small") && (this.energyPref == "inactive")) {
+    return(pug)
   }
-  else if ((this.sizePref = "large") && (this.energyPref = "inactive")) {
+  else if ((this.sizePref == "large") && (this.energyPref == "inactive")) {
     return(berneseMountainDog)
   }
-  else if ((this.sizePref = "small") && (this.energyPref = "active")) {
+  else if ((this.sizePref == "small") && (this.energyPref == "active")) {
     return(chihuahua)
   }
-  else if ((this.sizePref = "Large") && (this.energyPref = "active")) {
+  else if ((this.sizePref == "large") && (this.energyPref == "active")) {
     return(goldenRetriever)
   }
 };
 
 User.prototype.displayDog = function() {
-  $("#name").text(this.name)
-  $("#" + this.suggestion).show
+  $(".name").text(this.name)
+  $("#" + this.suggestion.name).show()
 }
 
 
@@ -52,20 +53,29 @@ User.prototype.displayDog = function() {
 
 
 $(document).ready(function() {
-  $("#match form").submit(function(event) {
+
+  $("form#match").submit(function(event) {
     event.preventDefault();
 
-    var userName = $("input#userName").val();
-    var userGender = $("input#gender").val();
-    var userAgeRange = $("input#age").val();
-    var userEnergy = $("input#activity").val();
-    var userLocation = $("input#location").val();
-    var userSizePref = $("input#size").val();
-    var userEnergyPref = $("input#energy").val();
+    $("#chihuahua").hide();
+    $("#pug").hide();
+    $("#bernese").hide();
+    $("#golden-retriever").hide();
 
-    var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref)
-    newUser.selectDog() = dogSuggestion
+    var userName = $("input#userName").val();
+    var userGender = $("#gender").val();
+    var userAgeRange = $("#age").val();
+    var userEnergy = $("#activity").val();
+    var userLocation = $("#location").val();
+    var userSizePref = $("#size").val();
+    var userEnergyPref = $("#energy").val();
+
+    var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref);
+    console.log(newUser)
+    var dogSuggestion = newUser.selectDog();
+    console.log(dogSuggestion)
     newUser.suggestion = dogSuggestion;
+    console.log(newUser)
     newUser.displayDog();
-  })
+  });
 })
