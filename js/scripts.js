@@ -41,8 +41,20 @@ User.prototype.selectDog = function (){
 User.prototype.displayDog = function() {
   $(".name").text(this.name)
   $("#" + this.suggestion.name).show()
+  $("#match").hide()
+  $("#return-button").show()
 }
-
+ 
+function attachEventListenerReturnButton() {
+  $("button#return").click(function() {
+    $("form#match").show();
+    $("#chihuahua").hide();
+    $("#pug").hide();
+    $("#bernese").hide();
+    $("#golden-retriever").hide();
+    $("button#return").hide();
+  });
+};
 
 
 
@@ -53,14 +65,9 @@ User.prototype.displayDog = function() {
 
 
 $(document).ready(function() {
-
   $("form#match").submit(function(event) {
     event.preventDefault();
-
-    $("#chihuahua").hide();
-    $("#pug").hide();
-    $("#bernese").hide();
-    $("#golden-retriever").hide();
+    attachEventListenerReturnButton()
 
     var userName = $("input#userName").val();
     var userGender = $("#gender").val();
@@ -71,11 +78,8 @@ $(document).ready(function() {
     var userEnergyPref = $("#energy").val();
 
     var newUser = new User(userName,userGender,userAgeRange,userEnergy,userLocation,userSizePref,userEnergyPref);
-    console.log(newUser)
     var dogSuggestion = newUser.selectDog();
-    console.log(dogSuggestion)
     newUser.suggestion = dogSuggestion;
-    console.log(newUser)
     newUser.displayDog();
   });
 })
