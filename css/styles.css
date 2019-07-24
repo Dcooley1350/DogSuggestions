@@ -16,3 +16,6 @@
 #return-button {
   display : none;
 }
+.inputWidth {
+  width: 200px;
+}
