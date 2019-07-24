@@ -52,7 +52,7 @@ function attachEventListenerReturnButton() {
     $("#pug").hide();
     $("#bernese").hide();
     $("#golden-retriever").hide();
-    $("button#return").hide();
+    $("#return-button").hide();
   });
 };
 
@@ -65,10 +65,11 @@ function attachEventListenerReturnButton() {
 
 
 $(document).ready(function() {
+  attachEventListenerReturnButton()
+
   $("form#match").submit(function(event) {
     event.preventDefault();
-    attachEventListenerReturnButton()
-
+    
     var userName = $("input#userName").val();
     var userGender = $("#gender").val();
     var userAgeRange = $("#age").val();
