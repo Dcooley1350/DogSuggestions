@@ -12,12 +12,15 @@
     <h1>Who will be your new best friend?</h1>
     <h2 class="intro">To find out what type of dog breed is best for your lifestyle, please tell us a little bit about
       yourself!</h2>
-    <form id="match">
+
       <!--- Questions about the user -->
-      <div class="form-group">
-        <label for="userName">Please enter your name:</label>
-        <input id="userName" type="text">
-      </div>
+    <form id="match">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="userName">Please enter your name:</label>
+            <input id="userName" type="text">
+          </div>
 
       <!--- User's Gender -->
       <div class="form-group">
@@ -77,6 +80,8 @@
           <option value="inactive">I want a calm companion</option>
         </select>
       </div>
+    </div>
+  </div>
 
       <!--- Submit Button-->
       <button type="submit" class="btn btn-primary">Show me my new best friend!</button>
@@ -85,29 +90,36 @@
 <!--- Dog options output, hidden by CSS -->
 
 <!--- Active, Small: Chihuahua -->
-
 <div id="chihuahua">
-  <h1>The Chihuahua</h1>
-  <p>It sounds like a Chihuahua would be the perfect dog for you, <span class="name"></span>! Chihuahuas make excellent high energy friends. They enjoy being with you wherever you go. They are small enough to carry along with you in a bag, yet mighty enough to join you on a long hike or run!</p>
-   <h2>Learn more about Chihuahuas</h2>
-  <ul>
-    <li>All about <a href=https://dogtime.com/dog-breeds/chihuahua#/slide/1>Chihuahuas!</a></li>
-    <li>Things every <a href=https://www.akc.org/expert-advice/news/things-chihuahua-owner-know>Chihuahua owner should know!</a></li>
-    <li>Check out these <a href=http://mentalfloss.com/article/64317/10-feisty-facts-about-chihuahuas>fiesty facts about Chihuahuas!</a></li>
-  </ul>
- </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1>The Chihuahua</h1>
+      <p>It sounds like a Chihuahua would be the perfect dog for you, <span class="name"></span>! Chihuahuas make excellent high energy friends. They enjoy being with you wherever you go. They are small enough to carry along with you in a bag, yet mighty enough to join you on a long hike or run!</p>
+      <h2>Learn more about Chihuahuas</h2>
+        <ul>
+          <li>All about <a href=https://dogtime.com/dog-breeds/chihuahua#/slide/1>Chihuahuas!</a></li>
+          <li>Things every <a href=https://www.akc.org/expert-advice/news/things-chihuahua-owner-know>Chihuahua owner should know!</a></li>
+          <li>Check out these <a href=http://mentalfloss.com/article/64317/10-feisty-facts-about-chihuahuas>fiesty facts about Chihuahuas!</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
  
  <!--- Active, Large: Golden Retriever -->
  
  <div id="golden-retriever">
-  <h1>The Golden Retriever</h1>
-  <p>It sounds like a Golden Retriever is the perfect dog for you, <span class="name"></span>! Golden Retrievers make excellent high energy friends. They love to go wherever you go. They particularly enjoy exercise! If you need a happy workout buddy who is always ready to get up and go, a Golden Retriever would make a great new best friend!</p>
-  <h2>Learn more about Golden Retrievers</h2>
-    <ul>
-      <li>All about <a href=https://www.akc.org/dog-breeds/golden-retriever>Golden Retrievers!</a></li>
-      <li>Things every <a href=https://www.grrmf.org/learn/owning-golden-retriever>Golden Retriever owner should know!</a></li>
-      <li>Check out these <a href=https://www.petairuk.com/news/10-facts-about-golden-retrievers>10 facts about Golden Retrievers!</a></li>
-    </ul>
+   <div class="panel panel-default">
+     <div class="panel-body">
+      <h1>The Golden Retriever</h1>
+      <p>It sounds like a Golden Retriever is the perfect dog for you, <span class="name"></span>! Golden Retrievers make excellent high energy friends. They love to go wherever you go. They particularly enjoy exercise! If you need a happy workout buddy who is always ready to get up and go, a Golden Retriever would make a great new best friend!</p>
+      <h2>Learn more about Golden Retrievers</h2>
+        <ul>
+          <li>All about <a href=https://www.akc.org/dog-breeds/golden-retriever>Golden Retrievers!</a></li>
+          <li>Things every <a href=https://www.grrmf.org/learn/owning-golden-retriever>Golden Retriever owner should know!</a></li>
+          <li>Check out these <a href=https://www.petairuk.com/news/10-facts-about-golden-retrievers>10 facts about Golden Retrievers!</a></li>
+        </ul>
+      </div>
+    </div>
  </div>
  
  <!--- Inactive, Small: Pug -->
@@ -140,5 +152,7 @@
   </div>
   
   </div>
+</div>
+</div>
 </body>
 </html>
