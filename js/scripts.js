@@ -39,20 +39,21 @@ User.prototype.selectDog = function (){
 };
 
 User.prototype.displayDog = function() {
-  $(".name").text(this.name)
-  $("#" + this.suggestion.name).show()
-  $("#match").hide()
-  $("#return-button").show()
+  $(".name").text(this.name);
+  $("#" + this.suggestion.name).show();
+  $("#match").hide();
+  $("#return-button").show();
 }
  
 function attachEventListenerReturnButton() {
   $("button#return").click(function() {
-    $("form#match").show();
+    $("form#match").trigger("reset");
     $("#chihuahua").hide();
     $("#pug").hide();
     $("#bernese").hide();
     $("#golden-retriever").hide();
     $("#return-button").hide();
+    $("form#match").show();
   });
 };
 
@@ -65,7 +66,7 @@ function attachEventListenerReturnButton() {
 
 
 $(document).ready(function() {
-  attachEventListenerReturnButton()
+  attachEventListenerReturnButton();
 
   $("form#match").submit(function(event) {
     event.preventDefault();
