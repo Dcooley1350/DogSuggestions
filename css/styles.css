@@ -16,6 +16,39 @@
 #return-button {
   display : none;
 }
+
+/* Header holding image */
+.header {
+  position: relative;
+}
+
+/* input width in form */
+
 .inputWidth {
   width: 200px;
+}
+
+h1.intro {
+  color: orange;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+h2.intro {
+  color: black;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: beige;
+}
+
+/* form color */
+.panel-body {
+  background-color: aquamarine;
 }
