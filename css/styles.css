@@ -22,6 +22,7 @@
   position: relative;
 }
 
+
 /* input width in form */
 
 .inputWidth {
@@ -48,7 +49,16 @@ body {
   background-color: beige;
 }
 
-/* form color */
+/* form styling */
 .panel-body {
+  float: left;
+  overflow: hidden;
+  margin: 15px;
   background-color: aquamarine;
+}
+
+.btn {
+  margin-top: 15px;
+  color: black;
+  background-color: orange;
 }
