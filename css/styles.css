@@ -54,6 +54,7 @@ h2.intro {
   font-family: 'Courier New', Courier, monospace
 }
 
+
 /* form styling */
 .panel-body {
   float: left;
@@ -79,10 +80,16 @@ form
 
 
 .btn {
-  margin-top: 15px;
+  margin-top: 10px;
   color: black;
   background-color: orange;
 }
+
+.btn-return { 
+  color: black;
+  background-color: orange;
+}
+
 
 /* image styling */
 
