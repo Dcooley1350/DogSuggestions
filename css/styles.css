@@ -1,3 +1,5 @@
+/* Initially hide results until submit */
+
 #golden-retriever {
   display : none;
 }
@@ -29,17 +31,8 @@
   width: 200px;
 }
 
-h1.intro {
-  color: orange;
-  text-align: center;
-  background-color: aquamarine;
-}
 
-h2.intro {
-  color: black;
-  text-align: left;
-  font-family: 'Courier New', Courier, monospace
-}
+/* body styling */
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -49,16 +42,58 @@ body {
   background-color: beige;
 }
 
+h1.intro {
+  color: orange;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+h2.intro {
+  color: black;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace
+}
+
 /* form styling */
 .panel-body {
   float: left;
-  overflow: hidden;
+  
   margin: 15px;
   background-color: aquamarine;
 }
+
+div.form
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* button styling */
+
 
 .btn {
   margin-top: 15px;
   color: black;
   background-color: orange;
 }
+
+/* image styling */
+
+img {
+  border-radius: 50%;
+  margin: 0 auto;
+  
+}
+
+.image-wrapper {
+  display: inherit;
+  text-align: center;
+}
+
