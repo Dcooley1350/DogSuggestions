@@ -20,6 +20,7 @@ _This web application willl collect information about the lifestyle and preferen
 ## Setup/Installation Requirements
 
 * _Simply load page in your browser!_
+* [Click here](https://dcooley1350.github.io/DogSuggestions/) to check out the site.
 
 ## Known Bugs
 
